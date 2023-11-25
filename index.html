@@ -6,15 +6,29 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <title>Weather App using HTML, CSS and JAVASCRIPT | Tyxiel and Gabriel Behling</title>
+    <title>Clima usando HTML, CSS and JAVASCRIPT | Tyxiel and Gabriel Behling</title>
 </head>
 <body>
     <main>
         <div class="container">
             <div class="search-box">
                 <i class='bx bxs-map'></i>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="Escreva seu estado ou cidade">
                 <button class="bx bx-search"></button>
+            </div>
+
+            <div class="weather-box">
+                <div class="box">
+                    <div class="info-weather">
+                        <div class="weather"></div>
+                            <img src="https://assets.hgbrasil.com/weather/icons/conditions/rain.svg">
+                            <div class="description-wrapper">
+                                <span class="temperature">20 <span>°C - </span></span>
+                                <span class="description">Nuvens Esparsas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
