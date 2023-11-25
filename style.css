@@ -89,7 +89,7 @@ body {
     width: 20%;
 }
 
-.weather-box p {
+.weather-box .description-wrapper p {
     position: relative;
     display: flex;
     float: left;
@@ -146,8 +146,4 @@ body {
     opacity: 30%;
     height: 150px;
     margin-top: 25px;
-}
-
-.weather-details {
-    float: left;
 }
