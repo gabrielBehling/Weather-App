@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    /* border: 1px solid; */ /* Corrigir alinhamentos */
 }
 
 body {
@@ -13,14 +14,14 @@ body {
     align-items: center;
     min-height: 100vh;
     min-width: 100vw;
-    background-color: aquamarine;
+    background-color: darkgray;
 }
 
 .container {
     position: relative;
     width: 1000px;
     height: 555px;
-    background-color: blueviolet;
+    background-color: rgb(60, 60, 60);
     border-radius: 16px;
     padding: 20px;
 }
@@ -78,7 +79,7 @@ body {
 }
 
 .weather-box {
-    margin: 40px 0;
+    margin: 20px 0;
     
 }
 
@@ -98,19 +99,55 @@ body {
 
 .weather-box .temperature {
     position: relative;
-    line-height: 2.5;
-    font-size: 64px;
+    line-height: 2.3;
+    font-size: 70px;
     font-weight: 700;
+    margin: 8px 0 6px 6px;
 }
 
 .weather-box .temperature span {
-    line-height: 5.4;
-    font-size: 24px;
+    line-height: 4.4;
+    font-size: 30px;
     margin-left: 4px;
+    margin-right: 20px;
+}
+
+.weather-box .city-description {
+    margin-left: 40px;
+    padding-left: 40px;
+    text-align: center;
+}
+
+.weather-box .city {
+    line-height: 6.5;
+    height: 0;
+    font-size: 22px;
+    margin-left: 4px;
+    text-align: center;
+}
+
+.weather-box .description {
+    line-height: 8.5;
+    font-size: 22px;
+    text-align: center;
+    text-transform: capitalize;
 }
 
 .description-wrapper{
     float: left;
+    width: 420px;
     height: 100px;
     color: #fff;
+}
+
+.vl {
+    float: left;
+    border-left: 2px solid white;
+    opacity: 30%;
+    height: 150px;
+    margin-top: 25px;
+}
+
+.weather-details {
+    float: left;
 }
