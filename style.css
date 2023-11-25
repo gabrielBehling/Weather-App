@@ -31,6 +31,7 @@ body {
     height: 55px;
     display: flex;
     align-items: center;
+    overflow: none;
 }
 
 .search-box input {
@@ -46,17 +47,20 @@ body {
     font-weight: 500;
     text-transform: uppercase;
     padding: 0 48px 0 42px;
+    overflow: none;
 }
 
 .search-box i {
     position: absolute;
     left: 10px;
     font-size: 28px;
+    color: #fff;
 }
 
 .search-box input::placeholder {
     color: #fff;
     text-transform: none;
+    overflow: none;
 }
 
 .search-box button {
@@ -75,8 +79,22 @@ body {
 
 .weather-box {
     text-align: left;
+    margin: 40px 0;
+    
 }
 
-.weather-box {
+.weather-box img {
+    float: left;
+    position: relative;
+    left: 0;
+    width: 15%;
+}
 
+.description-wrapper{
+    float: left;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
 }
