@@ -22,5 +22,8 @@ async function getWeather(){
 }
 
 function showWeather(weather){
-    console.log(weather)
+    document.querySelector('#weather-img').src = `https://assets.hgbrasil.com/weather/icons/conditions/${weather.condition_slug}.svg`
+    document.querySelector('#description').innerText = weather.description
+    document.querySelector('#temperature').innerText = weather.temp
+
 }
