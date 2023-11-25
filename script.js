@@ -1,6 +1,7 @@
 const weatherApiKey = "8d12cfba"
+const searchPlaceApiKey = "83061f0656fa44dab98fd0dc25faa974"
 
-async function getUserCity(){
+async function getUserLocation(){
     let user_ip = await fetch('https://api.ipify.org/?format=json')
     .then(response => response.json())
     .then(response => response.ip)
@@ -13,9 +14,8 @@ async function getUserCity(){
     return user_city
 }
 
-async function getWeather(){
-    const user_city = await getUserCity()
-    let weather = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=${weatherApiKey}&city_name=${user_city}&fields=only_results`)
+async function getWeather(city){
+    let weather = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=${weatherApiKey}&city_name=${city}&fields=only_results`)
     .then(response => response.json())
     
     showWeather(weather)
@@ -34,4 +34,22 @@ function showWeather(weather){
     wind_speed = parseFloat(wind_speed)
     wind_speed = Math.round(wind_speed)
     document.querySelector('#wind-speed').innerText = wind_speed + " km/h"
+}
+
+async function getUserWeather(){
+    const user_city = await getUserLocation()
+    getWeather(user_city)
+}
+
+async function getNewLocation(){
+    let userInput = document.querySelector("#search-input").value
+
+    let url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${userInput}&lang=en&limit=1&type=city&format=json&apiKey=${searchPlaceApiKey}`
+
+    let response = await fetch(url)
+    .then(response => response.json())
+    .then(response => response.results[0])
+
+    let newLocation = response.city + "," + response.state_code
+    getWeather(newLocation)
 }

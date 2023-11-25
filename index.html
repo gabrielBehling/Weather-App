@@ -13,8 +13,8 @@
         <div class="container">
             <div class="search-box">
                 <i class='bx bxs-map'></i>
-                <input type="text" placeholder="Escreva seu estado ou cidade">
-                <button class="bx bx-search"></button>
+                <input type="text" id="search-input" placeholder="Escreva sua cidade e estado">
+                <button class="bx bx-search" onclick="getNewLocation()"></button>
             </div>
 
             <div class="weather-box">
@@ -81,6 +81,6 @@
             </div>
         </div>
     </main>
-    <script>getWeather()</script>
+    <script>getUserWeather()</script>
 </body>
 </html>
