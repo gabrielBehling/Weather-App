@@ -27,6 +27,12 @@ function showWeather(weather){
     document.querySelector('#temperature').innerHTML = weather.temp + "<span>°C</span>"
     document.querySelector('#city').innerText = weather.city
     document.querySelector('#humidity').innerText = weather.humidity + '%'
-    document.querySelector('#wind-speed').innerText = weather.wind_speedy
+    document.querySelector('#rain').innerText = weather.rain + " mm"
+    document.querySelector('#sunset').innerText = weather.sunset
+
+    let wind_speed = weather.wind_speedy.split(' ')[0]
+    wind_speed = parseFloat(wind_speed)
+    wind_speed = Math.round(wind_speed)
+    document.querySelector('#wind-speed').innerText = wind_speed + " km/h"
 
 }
