@@ -1,4 +1,4 @@
-const apiKey = "8d12cfba"
+const weatherApiKey = "8d12cfba"
 
 async function getUserCity(){
     let user_ip = await fetch('https://api.ipify.org/?format=json')
@@ -15,7 +15,7 @@ async function getUserCity(){
 
 async function getWeather(){
     const user_city = await getUserCity()
-    let weather = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=${apiKey}&city_name=${user_city}&fields=only_results`)
+    let weather = await fetch(`https://api.hgbrasil.com/weather?format=json-cors&key=${weatherApiKey}&city_name=${user_city}&fields=only_results`)
     .then(response => response.json())
     
     showWeather(weather)
@@ -34,5 +34,4 @@ function showWeather(weather){
     wind_speed = parseFloat(wind_speed)
     wind_speed = Math.round(wind_speed)
     document.querySelector('#wind-speed').innerText = wind_speed + " km/h"
-
 }
