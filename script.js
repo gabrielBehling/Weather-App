@@ -1,6 +1,17 @@
 const weatherApiKey = "8d12cfba"
 const searchPlaceApiKey = "83061f0656fa44dab98fd0dc25faa974"
 
+function initialize(){
+    let search_button = document.querySelector('#search-buttom')
+    search_button.addEventListener('click', getNewLocation)
+    let search_input = document.querySelector('#search-input')
+    search_input.addEventListener('keypress', (e) => {
+        if (e.key == "Enter"){ getNewLocation() }
+    })
+
+    getUserWeather()
+}
+
 async function getUserLocation(){
     let user_ip = await fetch('https://api.ipify.org/?format=json')
     .then(response => response.json())
@@ -22,6 +33,7 @@ async function getWeather(city){
 }
 
 function showWeather(weather){
+    console.log(weather);
     document.querySelector('#weather-img').src = `https://assets.hgbrasil.com/weather/icons/conditions/${weather.condition_slug}.svg`
     document.querySelector('#description').innerText = weather.description
     document.querySelector('#temperature').innerHTML = weather.temp + "<span>°C</span>"
@@ -43,6 +55,8 @@ async function getUserWeather(){
 
 async function getNewLocation(){
     let userInput = document.querySelector("#search-input").value
+
+    if (userInput.length < 4){ return }
 
     let url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${userInput}&lang=en&limit=1&type=city&format=json&apiKey=${searchPlaceApiKey}`
 
