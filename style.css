@@ -189,6 +189,7 @@ body {
 .humidity .info-humidity {
     float: left;
     line-height: 2;
+    color: #fff;
 }
 
 .humidity .text .humidity-text {
@@ -230,7 +231,19 @@ body {
     margin-bottom: 20px;
 }
 
+.rain .info-rain{
+    float: left;
+    line-height: 2;
+    color: #fff;
+}
+
 .sunset {
     float: left;
     clear: both;
+}
+
+.sunset .info-sunset {
+    float: left;
+    line-height: 2;
+    color: #fff;
 }
