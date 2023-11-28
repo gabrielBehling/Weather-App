@@ -33,7 +33,6 @@ async function getWeather(city){
 }
 
 function showWeather(weather){
-    console.log(weather);
     document.querySelector('#weather-img').src = `https://assets.hgbrasil.com/weather/icons/conditions/${weather.condition_slug}.svg`
     document.querySelector('#description').innerText = weather.description
     document.querySelector('#temperature').innerHTML = weather.temp + "<span>°C</span>"
@@ -63,6 +62,11 @@ async function getNewLocation(){
     let response = await fetch(url)
     .then(response => response.json())
     .then(response => response.results[0])
+
+
+    if(response == undefined){ return }
+    if(response.rank.confidence_city_level < 0.7){ return }
+    if(response.country_code != 'br'){ return }
 
     let newLocation = response.city + "," + response.state_code
     getWeather(newLocation)
