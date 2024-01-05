@@ -39,8 +39,12 @@ function showWeather(weather){
 }
 
 function showForecast(forecast){
-    document.querySelector(".box1 img").src = `https://assets.hgbrasil.com/weather/icons/conditions/${forecast[0].condition}.svg`
-    document.querySelector(".box1 #max").innerText = forecast[0].max
-    document.querySelector(".box1 #min").innerText = forecast[0].min
-    document.querySelector(".box1 .weather-desc").innerHTML = '&nbsp' + forecast[0].description
+    for(let i = 1; i <= 6; i++){
+        document.querySelector(`.box${i} .day`).innerText = forecast[i].weekday
+        document.querySelector(`.box${i} img`).src = `https://assets.hgbrasil.com/weather/icons/conditions/${forecast[i].condition}.svg`
+        document.querySelector(`.box${i} #max`).innerText = forecast[i].max
+        document.querySelector(`.box${i} #min`).innerText = forecast[i].min
+        document.querySelector(`.box${i} .weather-desc`).innerHTML = '&nbsp' + forecast[i].description
+    }
+    
 }
