@@ -270,25 +270,48 @@ body {
 }
 
 .forecast-box .box1 {
-
+    margin: 0 10px 0 2.5px;
+    float: left;
+    height: 150px;
+    width: 150px;
+    border: 1px solid blue;
 }
 
 .forecast-box .box2 {
-    
+    margin: 0 10px 0 0;
+    float: left;
+    height: 150px;
+    width: 150px;
+    border: 1px solid blue;
 }
 
 .forecast-box .box3 {
-    
+    margin: 0 10px 0 0;
+    float: left;
+    height: 150px;
+    width: 150px;
+    border: 1px solid blue;
 }
 
-.forecast-box .box14 {
-    
+.forecast-box .box4 {
+    margin: 0 10px 0 0;
+    float: left;
+    height: 150px;
+    width: 150px;
+    border: 1px solid blue;
 }
 
 .forecast-box .box5 {
-    
+    margin: 0 10px 0 0;
+    float: left;
+    height: 150px;
+    width: 150px;
+    border: 1px solid blue;
 }
 
 .forecast-box .box6 {
-    
+    float: left;
+    height: 150px;
+    width: 150px;
+    border: 1px solid blue;
 }
