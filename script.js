@@ -34,4 +34,13 @@ function showWeather(weather){
     wind_speed = parseFloat(wind_speed)
     wind_speed = Math.round(wind_speed)
     document.querySelector('#wind-speed').innerText = wind_speed + " km/h"
+
+    showForecast(weather.forecast)
+}
+
+function showForecast(forecast){
+    document.querySelector(".box1 img").src = `https://assets.hgbrasil.com/weather/icons/conditions/${forecast[0].condition}.svg`
+    document.querySelector(".box1 #max").innerText = forecast[0].max
+    document.querySelector(".box1 #min").innerText = forecast[0].min
+    document.querySelector(".box1 .weather-desc").innerHTML = '&nbsp' + forecast[0].description
 }
