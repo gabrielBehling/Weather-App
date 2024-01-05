@@ -5,11 +5,30 @@ function initialize(){
     let search_button = document.querySelector('#search-buttom')
     search_button.addEventListener('click', getNewLocation)
     let search_input = document.querySelector('#search-input')
-    search_input.addEventListener('keypress', (e) => {
-        if (e.key == "Enter"){ getNewLocation() }
-    })
+    search_input.addEventListener('keypress', searchInputHandler)
 
     getUserWeather()
+}
+
+let timeoutID
+function searchInputHandler(e){
+    if (e.key == "Enter"){
+        getNewLocation()
+        return
+    }
+
+    clearTimeout(timeoutID)
+
+    timeoutID = setTimeout(showAutocompleteOptions, 2 * 1000);
+}
+
+function showAutocompleteOptions(){
+    let search_input = document.querySelector('#search-input')
+
+    let autocompleteOptionBox = document.createElement("div")
+    autocompleteOptionBox.id = "autocompleteOptionBox"
+
+    search_input.appendChild(autocompleteOptionBox)
 }
 
 async function getUserLocation(){
@@ -52,22 +71,29 @@ async function getUserWeather(){
     getWeather(user_city)
 }
 
-async function getNewLocation(){
+function getNewLocation(){
     let userInput = document.querySelector("#search-input").value
 
     if (userInput.length < 4){ return }
 
+    callAutocompleteAPI(userInput)
+}
+
+async function callAutocompleteAPI(userInput){
     let url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${userInput}&lang=en&limit=1&type=city&format=json&apiKey=${searchPlaceApiKey}`
 
     let response = await fetch(url)
     .then(response => response.json())
     .then(response => response.results[0])
 
+    getNewLocationIfValidResponse(response)
+}
 
+function getWeatherIfValidResponse(response){
     if(response == undefined){ return }
     if(response.rank.confidence_city_level < 0.7){ return }
     if(response.country_code != 'br'){ return }
-
+    
     let newLocation = response.city + "," + response.state_code
     getWeather(newLocation)
 }
