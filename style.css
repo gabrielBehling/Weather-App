@@ -286,18 +286,10 @@ body {
     font-weight: 500;
 }
 
-.box1 .max span {
-    color: #ec5353;
-}
-
 .box1 .min {
     color: white;
     font-size: 13px;
     font-weight: 500;
-}
-
-.box1 .min span {
-    color: blue;
 }
 
 .box1 .weather-desc {
