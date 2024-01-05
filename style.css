@@ -245,6 +245,7 @@ body {
 }
 
 .sunset {
+    width: 130px;
     float: left;
     clear: both;
 }
@@ -259,6 +260,8 @@ body {
     float: left;
     clear: both;
     font-size: 14px;
+    width: 100%;
+    text-align: center;
 }
 
 .forecast-box {
