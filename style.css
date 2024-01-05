@@ -237,6 +237,12 @@ body {
     color: #fff;
 }
 
+.rain .text .rain-text {
+    float: left;
+    clear: both;
+    font-size: 14px;
+}
+
 .sunset {
     float: left;
     clear: both;
@@ -246,4 +252,43 @@ body {
     float: left;
     line-height: 2;
     color: #fff;
+}
+
+.sunset .text .sunset-text {
+    float: left;
+    clear: both;
+    font-size: 14px;
+}
+
+.forecast-box {
+    margin-top: 50px;
+    float: left;
+    clear: both;
+    border: 1px solid red;
+    height: 150px;
+    width: 960px;
+}
+
+.forecast-box .box1 {
+
+}
+
+.forecast-box .box2 {
+    
+}
+
+.forecast-box .box3 {
+    
+}
+
+.forecast-box .box14 {
+    
+}
+
+.forecast-box .box5 {
+    
+}
+
+.forecast-box .box6 {
+    
 }
