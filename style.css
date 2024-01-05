@@ -264,7 +264,6 @@ body {
     margin-top: 50px;
     float: left;
     clear: both;
-    border: 1px solid red;
     height: 150px;
     width: 960px;
 }
@@ -274,7 +273,38 @@ body {
     float: left;
     height: 150px;
     width: 150px;
-    border: 1px solid blue;
+}
+
+.box1 img {
+    width: 75%;
+}
+
+.box1 .max {
+    font-size: 13px;
+    margin-top: 15px;
+    color: white;
+    font-weight: 500;
+}
+
+.box1 .max span {
+    color: #ec5353;
+}
+
+.box1 .min {
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.box1 .min span {
+    color: blue;
+}
+
+.box1 .weather-desc {
+    float: left;
+    text-transform: capitalize;
+    color: white;
+    font-weight: 500;
 }
 
 .forecast-box .box2 {
