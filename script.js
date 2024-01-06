@@ -19,16 +19,39 @@ function searchInputHandler(e){
 
     clearTimeout(timeoutID)
 
-    timeoutID = setTimeout(showAutocompleteOptions, 2 * 1000);
+    timeoutID = setTimeout(showAutocompleteOptions, 2 * 1000, e);
 }
 
-function showAutocompleteOptions(){
-    let search_input = document.querySelector('#search-input')
+async function showAutocompleteOptions(){
+    let options_box = document.querySelector('#autocompleteResults')
+    options_box.innerHTML = ''
 
-    let autocompleteOptionBox = document.createElement("div")
-    autocompleteOptionBox.id = "autocompleteOptionBox"
 
-    search_input.appendChild(autocompleteOptionBox)
+    let options = await getOptions()
+    options.reverse()
+
+    options.forEach(option => {
+        let optionBox = document.createElement("li")
+        optionBox.innerText = option.formatted
+
+        optionBox.addEventListener('click', e => {
+            document.querySelector("#search-input").value = e.srcElement.innerText
+            options_box.innerHTML = ''
+            getWeatherIfValidResponse(option)
+        })
+
+        options_box.appendChild(optionBox)
+    });
+}
+
+async function getOptions(){
+    let userInput = document.querySelector("#search-input").value
+    let url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${userInput}&lang=pt&limit=3&type=city&format=json&apiKey=${searchPlaceApiKey}`
+
+    let response = await fetch(url)
+    .then(response => response.json())
+
+    return response.results
 }
 
 async function getUserLocation(){
@@ -80,7 +103,7 @@ function getNewLocation(){
 }
 
 async function callAutocompleteAPI(userInput){
-    let url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${userInput}&lang=en&limit=1&type=city&format=json&apiKey=${searchPlaceApiKey}`
+    let url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${userInput}&lang=pt&limit=1&type=city&format=json&apiKey=${searchPlaceApiKey}`
 
     let response = await fetch(url)
     .then(response => response.json())
