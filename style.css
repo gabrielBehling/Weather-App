@@ -181,72 +181,21 @@ body {
     width: 100px;
 }
 
-.humidity {
-    float: left;
-    clear: both;
-    margin-bottom: 20px;
-}
-
-.humidity i {
-    float: left;
-    margin-bottom: 0px;
-}
-
-.humidity .info-humidity {
-    float: left;
-    line-height: 2;
-    color: #fff;
-}
-
-.humidity .text .humidity-text {
-    float: left;
-    clear: both;
-    font-size: 14px;
-}
-
-.wind {
-    float: left;
-    clear: both;
-}
-
-.wind i {
-    float: left;
-}
-
-.wind .info-wind {
-    color: #fff;
-    line-height: 2;
-    text-wrap: none;
-}
-
-.wind .text .wind-text {
-    float: left;
-    clear: both;
-    font-size: 14px;
-}
-
 .weather-details-right {
     display: grid;
     float: left;
     clear: both;
 }
 
-.rain {
+.humidity, .rain {
     float: left;
     clear: both;
     margin-bottom: 20px;
 }
 
-.rain .info-rain{
-    float: left;
-    line-height: 2;
-    color: #fff;
-}
-
-.rain .text .rain-text {
+.wind {
     float: left;
     clear: both;
-    font-size: 14px;
 }
 
 .sunset {
@@ -255,13 +204,18 @@ body {
     clear: both;
 }
 
-.sunset .info-sunset {
+.humidity i, .wind i {
+    float: left;
+    margin-bottom: 0px;
+}
+
+.humidity .info-humidity, .wind .info-wind, .rain .info-rain, .sunset .info-sunset {
     float: left;
     line-height: 2;
     color: #fff;
 }
 
-.sunset .text .sunset-text {
+.humidity .text .humidity-text, .wind .text .wind-text, .rain .text .rain-text, .sunset .text .sunset-text {
     float: left;
     clear: both;
     font-size: 14px;
