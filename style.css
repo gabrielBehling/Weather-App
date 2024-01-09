@@ -181,13 +181,7 @@ body {
     width: 100px;
 }
 
-.weather-details-right {
-    display: grid;
-    float: left;
-    clear: both;
-}
-
-.humidity, .rain {
+.humidity {
     float: left;
     clear: both;
     margin-bottom: 20px;
@@ -198,15 +192,27 @@ body {
     clear: both;
 }
 
-.sunset {
-    width: 130px;
+.humidity i, .wind i {
+    float: left;
+    margin-bottom: 0px;
+}
+
+.weather-details-right {
+    display: grid;
     float: left;
     clear: both;
 }
 
-.humidity i, .wind i {
+.rain {
     float: left;
-    margin-bottom: 0px;
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.sunset {
+    width: 130px;
+    float: left;
+    clear: both;
 }
 
 .humidity .info-humidity, .wind .info-wind, .rain .info-rain, .sunset .info-sunset {
