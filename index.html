@@ -1,138 +1,138 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Gabriel Behling & Tyxiel">
-    <meta name="description" content="Clima usando HTML, CSS and JAVASCRIPT">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Clima usando HTML, CSS and JAVASCRIPT | Tyxiel and Gabriel Behling</title>
-</head>
-<body>
-    <main>
-        <div class="container">
-            <div class="search-box">
-                <i class='bx bxs-map'></i>
-                <input required value="search-text" type="text" placeholder="Escreva seu estado ou cidade">
-                <button class="bx bx-search"></button>
-            </div>
-
-            <div class="weather-box">
-                <div class="box">
-                    <div class="info-weather">
-                        <div class="weather"></div>
-                            <img src="https://assets.hgbrasil.com/weather/icons/conditions/cloud.svg" id="weather-img" alt="nublado">
-                            <div class="description-wrapper">
-                                <p class="temperature" id="temperature">21 <span>°C</span></p>
-                                <div class="city-description">
-                                    <p class="city" id="city">São Paulo, SP</p>
-                                    <p class="description" id="description">Tempo nublado</p>
+    <head>
+        <title>Clima usando HTML, CSS and JAVASCRIPT | Tyxiel and Gabriel Behling</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Gabriel Behling & Tyxiel">
+        <meta name="description" content="Clima usando HTML, CSS and JAVASCRIPT">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div class="search-box">
+                    <i class='bx bxs-map'></i>
+                    <input required value="search-text" type="text" placeholder="Escreva seu estado ou cidade">
+                    <button class="bx bx-search"></button>
+                </div>
+                <div class="weather-box">
+                    <div class="box">
+                        <div class="info-weather">
+                            <div class="weather"></div>
+                                <img src="https://assets.hgbrasil.com/weather/icons/conditions/cloud.svg" id="weather-img" alt="nublado">
+                                <div class="description-wrapper">
+                                    <p class="temperature" id="temperature">21 <span>°C</span></p>
+                                    <div class="city-description">
+                                        <p class="city" id="city">São Paulo, SP</p>
+                                        <p class="description" id="description">Tempo nublado</p>
+                                    </div>
                                 </div>
-                            </div>
                                 <div class="vl"></div>
-                            <div class="weather-details">
-                                <div class="weather-details-left">
-                                    <div class="humidity">
-                                        <i class='bx bx-water'></i>
-                                        <div class="text">
-                                            <div class="info-humidity">
-                                                <p id="humidity">82%</p>
+                                <div class="weather-details">
+                                    <div class="weather-details-left">
+                                        <div class="humidity">
+                                            <i class='bx bx-water'></i>
+                                            <div class="text">
+                                                <div class="info-humidity">
+                                                    <p id="humidity">82%</p>
+                                                </div>
+                                                <p class="humidity-text">&nbspUmidade</p>
                                             </div>
-                                            <p class="humidity-text">&nbspUmidade</p>
+                                        </div>
+
+                                        <div class="wind">
+                                            <i class='bx bx-wind'></i>
+                                            <div class="text">
+                                                <div class="info-wind">
+                                                    <span id="wind-speed">4 km/h</span>
+                                                </div>
+                                                <p class="wind-text">&nbspVel. do Vento</p>
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div class="wind">
-                                        <i class='bx bx-wind'></i>
-                                        <div class="text">
-                                            <div class="info-wind">
-                                                <span id="wind-speed">4 km/h</span>
+                                    <div class="weather-details-right">
+                                        <div class="rain">
+                                            <i class='bx bx-cloud-light-rain' ></i>
+                                            <div class="text">
+                                                <div class="info-rain">
+                                                    <span id="rain">0 mm</span>
+                                                </div>
+                                                <p class="rain-text">Precipitação</p>
                                             </div>
-                                            <p class="wind-text">&nbspVel. do Vento</p>
                                         </div>
-                                    </div>
-                                </div>
 
-                                <div class="weather-details-right">
-                                    <div class="rain">
-                                        <i class='bx bx-cloud-light-rain' ></i>
-                                        <div class="text">
-                                            <div class="info-rain">
-                                                <span id="rain">0 mm</span>
+                                        <div class="sunset">
+                                            <i class='bx bx-sun' ></i>
+                                            <div class="text">
+                                                <div class="info-sunset">
+                                                    <span id="sunset">06:56 pm</span>
+                                                </div>
+                                                <p class="sunset-text">&nbsp&nbspPôr do Sol</p>
                                             </div>
-                                            <p class="rain-text">Precipitação</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="sunset">
-                                        <i class='bx bx-sun' ></i>
-                                        <div class="text">
-                                            <div class="info-sunset">
-                                                <span id="sunset">06:56 pm</span>
-                                            </div>
-                                            <p class="sunset-text">&nbsp&nbspPôr do Sol</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="forecast-box">
-                        <div class="box1">
-                            <div class="day">Qua.</div>
-                            <img src="https://assets.hgbrasil.com/weather/icons/conditions/cloud.svg" id="weather-img-box1" alt="nublado">
-                            <div class="max">Max<br><span id="max">30</span>°C</div>
-                            <div class="min">Min<br><span id="min">19</span>°C</div>
-                            <div class="weather-desc">&nbspChuvas esparsas</div>
-                        </div>
-                        <div class="vl-forecast"></div>
-                        <div class="box2">
-                            <div class="day">Qui.</div>
-                            <img src="https://assets.hgbrasil.com/weather/icons/conditions/rain.svg" id="weather-img-box2" alt="chovendo">
-                            <div class="max">Max<br><span id="max">31</span>°C</div>
-                            <div class="min">Min<br><span id="min">20</span>°C</div>
-                            <div class="weather-desc">&nbspChuva</div>
-                        </div>
-                        <div class="vl-forecast"></div>
-                        <div class="box3">
-                            <div class="day">Sex.</div>
-                            <img src="https://assets.hgbrasil.com/weather/icons/conditions/rain.svg" id="weather-img-box3" alt="chovendo">
-                            <div class="max">Max<br><span id="max">31</span>°C</div>
-                            <div class="min">Min<br><span id="min">20</span>°C</div>
-                            <div class="weather-desc">&nbspChuvas esparsas</div>
-                        </div>
-                        <div class="vl-forecast"></div>
-                        <div class="box4">
-                            <div class="day">Sáb.</div>
-                            <img src="https://assets.hgbrasil.com/weather/icons/conditions/rain.svg" id="weather-img-box4" alt="chovendo">
-                            <div class="max">Max<br><span id="max">30</span>°C</div>
-                            <div class="min">Min<br><span id="min">19</span>°C</div>
-                            <div class="weather-desc">&nbspChuvas esparsas</div>
-                        </div>
-                        <div class="vl-forecast"></div>
-                        <div class="box5">
-                            <div class="day">Dom.</div>
-                            <img src="https://assets.hgbrasil.com/weather/icons/conditions/clear_day.svg" id="weather-img-box5" alt="tempo limpo">
-                            <div class="max">Max<br><span id="max">33</span>°C</div>
-                            <div class="min">Min<br><span id="min">20</span>°C</div>
-                            <div class="weather-desc">&nbspChuvas esparsas</div>
-                        </div>
-                        <div class="vl-forecast"></div>
-                        <div class="box6">
-                            <div class="day">Seg.</div>
-                            <img src="https://assets.hgbrasil.com/weather/icons/conditions/rain.svg" id="weather-img-box6" alt="chovendo">
-                            <div class="max">Max<br><span id="max">30</span>°C</div>
-                            <div class="min">Min<br><span id="min">19</span>°C</div>
-                            <div class="weather-desc">&nbspChuvas esparsas</div>
+                        <div class="forecast-box">
+                            <div class="box1">
+                                <div class="day">Qua.</div>
+                                <img src="https://assets.hgbrasil.com/weather/icons/conditions/cloud.svg" id="weather-img-box1" alt="nublado">
+                                <div class="max">Max<br><span id="max">30</span>°C</div>
+                                <div class="min">Min<br><span id="min">19</span>°C</div>
+                                <div class="weather-desc">&nbspChuvas esparsas</div>
+                            </div>
+                            <div class="vl-forecast"></div>
+                            <div class="box2">
+                                <div class="day">Qui.</div>
+                                <img src="https://assets.hgbrasil.com/weather/icons/conditions/rain.svg" id="weather-img-box2" alt="chovendo">
+                                <div class="max">Max<br><span id="max">31</span>°C</div>
+                                <div class="min">Min<br><span id="min">20</span>°C</div>
+                                <div class="weather-desc">&nbspChuva</div>
+                            </div>
+                            <div class="vl-forecast"></div>
+                            <div class="box3">
+                                <div class="day">Sex.</div>
+                                <img src="https://assets.hgbrasil.com/weather/icons/conditions/rain.svg" id="weather-img-box3" alt="chovendo">
+                                <div class="max">Max<br><span id="max">31</span>°C</div>
+                                <div class="min">Min<br><span id="min">20</span>°C</div>
+                                <div class="weather-desc">&nbspChuvas esparsas</div>
+                            </div>
+                            <div class="vl-forecast"></div>
+                            <div class="box4">
+                                <div class="day">Sáb.</div>
+                                <img src="https://assets.hgbrasil.com/weather/icons/conditions/rain.svg" id="weather-img-box4" alt="chovendo">
+                                <div class="max">Max<br><span id="max">30</span>°C</div>
+                                <div class="min">Min<br><span id="min">19</span>°C</div>
+                                <div class="weather-desc">&nbspChuvas esparsas</div>
+                            </div>
+                            <div class="vl-forecast"></div>
+                            <div class="box5">
+                                <div class="day">Dom.</div>
+                                <img src="https://assets.hgbrasil.com/weather/icons/conditions/clear_day.svg" id="weather-img-box5" alt="tempo limpo">
+                                <div class="max">Max<br><span id="max">33</span>°C</div>
+                                <div class="min">Min<br><span id="min">20</span>°C</div>
+                                <div class="weather-desc">&nbspChuvas esparsas</div>
+                            </div>
+                            <div class="vl-forecast"></div>
+                            <div class="box6">
+                                <div class="day">Seg.</div>
+                                <img src="https://assets.hgbrasil.com/weather/icons/conditions/rain.svg" id="weather-img-box6" alt="chovendo">
+                                <div class="max">Max<br><span id="max">30</span>°C</div>
+                                <div class="min">Min<br><span id="min">19</span>°C</div>
+                                <div class="weather-desc">&nbspChuvas esparsas</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <script>getWeather()</script>
-</body>
+        </main>
+        <script>getWeather()</script>
+    </body>
 </html>
