@@ -8,6 +8,11 @@
     /* border: 1px solid; */ /* Corrigir alinhamentos */
 }
 
+label {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -297,7 +302,7 @@ body {
     font-weight: 600;
 }
 
-.box1 img {
+.box1 img, .box2 img, .box3 img, .box4 img, .box5 img, .box6 img{
     width: 70%;
 }
 
@@ -335,10 +340,6 @@ body {
     font-weight: 600;
 }
 
-.box2 img {
-    width: 70%;
-}
-
 .box2 .max {
     font-size: 13px;
     margin: 15px 0 5px 0;
@@ -371,10 +372,6 @@ body {
     color: #fff;
     font-size: 20px;
     font-weight: 600;
-}
-
-.box3 img {
-    width: 70%;
 }
 
 .box3 .max {
@@ -411,10 +408,6 @@ body {
     font-weight: 600;
 }
 
-.box4 img {
-    width: 70%;
-}
-
 .box4 .max {
     font-size: 13px;
     margin: 15px 0 5px 0;
@@ -449,10 +442,6 @@ body {
     font-weight: 600;
 }
 
-.box5 img {
-    width: 70%;
-}
-
 .box5 .max {
     font-size: 13px;
     margin: 15px 0 5px 0;
@@ -484,10 +473,6 @@ body {
     color: #fff;
     font-size: 20px;
     font-weight: 600;
-}
-
-.box6 img {
-    width: 70%;
 }
 
 .box6 .max {
