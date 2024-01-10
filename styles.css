@@ -19,8 +19,8 @@ body {
 
 .container {
     position: relative;
-    width: 1000px;
     height: 525px;
+    width: 1024px;
     background-color: #1C3D49;
     opacity: 0.9;
     border-radius: 16px;
@@ -87,7 +87,21 @@ body {
 .weather-box img {
     float: left;
     left: 0;
-    width: 20%;
+    width: 200px;
+}
+
+.description-wrapper{
+    float: left;
+    width: 420px;
+    height: 100px;
+    color: #fff;
+}
+
+.weather-box .description {
+    line-height: 8;
+    font-size: 1.3em;
+    text-align: center;
+    text-transform: capitalize;
 }
 
 .weather-box .description-wrapper p {
@@ -125,20 +139,6 @@ body {
     font-size: 22px;
     margin-left: 4px;
     text-align: center;
-}
-
-.weather-box .description {
-    line-height: 8;
-    font-size: 22px;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-.description-wrapper{
-    float: left;
-    width: 420px;
-    height: 100px;
-    color: #fff;
 }
 
 .vl {
@@ -227,8 +227,7 @@ body {
 .forecast-box {
     margin-top: 50px;
     float: left;
-    clear: both;
-    height: 200px;
+    height: 160px;
     width: 980px;
 }
 
@@ -244,9 +243,10 @@ body {
 }
 
 .forecast-box .box1, .forecast-box .box2, .forecast-box .box3, .forecast-box .box4, .forecast-box .box5, .forecast-box .box6 {
+    position: relative;
     margin: 0 10px 0 2.5px;
     float: left;
-    height: 200px;
+    height: 150px;
     width: 145px;
 }
 
@@ -258,7 +258,7 @@ body {
 }
 
 .box1 img, .box2 img, .box3 img, .box4 img, .box5 img, .box6 img {
-    width: 70%;
+    width: 100px;
 }
 
 .box1 .max, .box2 .max, .box3 .max, .box4 .max, .box5 .max, .box6 .max {
