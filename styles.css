@@ -28,6 +28,8 @@ body {
     padding: 20px;
 }
 
+/* Search Bar */
+
 .search-box {
     position: relative;
     width: 100%;
@@ -79,6 +81,8 @@ body {
     cursor: pointer;
 }
 
+/* Main Weather */
+
 .weather-box {
     margin: 20px 0;
     
@@ -112,6 +116,8 @@ body {
     margin: auto 5px;
 }
 
+/* Temperature */
+
 .weather-box .temperature {
     position: relative;
     line-height: 2.3;
@@ -141,6 +147,8 @@ body {
     text-align: center;
 }
 
+/* White Vertical Divisor */
+
 .vl {
     float: left;
     border-left: 2px solid white;
@@ -150,6 +158,8 @@ body {
     margin-left: 1px;
     margin-right: 10px;
 }
+
+/* Humidity and other weather deatails */
 
 .weather-details {
     display: flex;
@@ -223,6 +233,8 @@ body {
     width: 100%;
     text-align: center;
 }
+
+/* Forecast */
 
 .forecast-box {
     margin-top: 50px;
