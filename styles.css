@@ -21,7 +21,7 @@ body {
     position: relative;
     height: 525px;
     width: 1024px;
-    background-color: #1C3D49;
+    background: linear-gradient(45deg, #3F5D6D, #14343E);
     opacity: 0.9;
     border-radius: 16px;
     margin: auto;
